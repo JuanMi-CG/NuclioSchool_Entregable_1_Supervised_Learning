@@ -1,0 +1,82 @@
+,Nulos,Transformacion,Comentario,Alumno
+MachineIdentifier,-,ELIMINAR,Codigo único alfanumérico identificativo de cada ordenador,ANTO
+ProductName,-,OHE,Agregamos mseprerelease a mse,ANTO
+EngineVersion,-,-,"Numero de versión del engine, se deja la columna como tipo object",ANTO
+AppVersion,-,-,"Numero de versión de la app, se deja la columna como tipo object",ANTO
+AvSigVersion,-,-,"Es un número que identifica la versión, se deja la columna como tipo object",ANTO
+Platform,-,OHE,Correlacionada con 'OsPlatformSubRelease,ANTO
+Processor,-,OHE,Tipo de procesador,ANTO
+OsVer,-,-,Versión del sistema operativo,ANTO
+OsPlatformSubRelease,-,OHE,Vinculado a la variable 'Platform',ANTO
+OsBuildLab,-,OHE,,ANTO
+SkuEdition,-,OHE,Se juntan los entreprise',ANTO
+Census_OSArchitecture,-,OHE,"En esta columna tenemos una clara desviación en favor de la arquitectura amd64, la cual tiene muchos más valores y mayor media. La arquitectura arm64 tiene muy pocos casos. El algoritmo entenderá si es o no amd64",MARIO
+Census_OSBranch,-,OHE,Aquí puede haber valores suficientes para que el algoritmo no solo entienda si es la categoría mayoritaria o no,MARIO
+Census_OSSkuName,-,OHE,Se crea categoría 'other,MARIO
+Census_OSInstallTypeName,-,OHE,"La variabilidad sigue siendo muy baja en la columna, pero las frecuencias en las columnas funcionarán bien para un OHE",MARIO
+Census_OSWUAutoUpdateOptionsName,-,OHE,Variabilidad baja,MARIO
+Census_IsPortableOperatingSystem,-,-,Presenta poca variabilidad,MARIO
+Census_GenuineStateName,-,OHE,"Presenta poca variabilidad, el algoritmo distinguirá entre la clase mayoritaria y la que no",MARIO
+Census_ActivationChannel,-,OHE,La columna presenta variabilidad,MARIO
+Census_FlightRing,-,OHE,La columna presenta variabilidad. Se agrupan en categoria 'other las minoritarias,MARIO
+Census_IsPenCapable,-,-,El algoritmo seguramente entienda si es o no de la clase meyoritaria,MARIO
+Census_IsFlightingInternal,Nulos a -1,-,"La mayoría son 0, y solo hay 2 1, sugiere pensar que los nulos puedan ser 1's",MARIO
+Census_IsFlightsDisabled,Nulos a -1,-,"La mayoría son 0, y solo hay 7 1, sugiere pensar que los nulos puedan ser 1's",MARIO
+Census_FirmwareManufacturerIdentifier,-,OHE,La tratamos como categorica. Hemos agrupado la mayoría e imputado -1,MARIO
+Census_FirmwareVersionIdentifier,-,OHE,La tratamos como categorica. Hemos agrupado la mayoría e imputado -1. ,MARIO
+Census_IsTouchEnabled,-,-,-,MARIO
+IeVerIdentifier,Nulos a -1,-,Es un identificador numerico. Como indica la versión del IE suponemos que existe una cronología. Como es columna numerica la pasamos a tipo numerico.,JUANMI
+SmartScreen,Se crea categoria 'nulo'.,OHE,Se crea categoria 'Other' para categorias con menos de 500 registros.,JUANMI
+Census_MDC2FormFactor,-.,OHE,Se unen categorias que son servidores.,JUANMI
+Census_OEMNameIdentifier,Se crea categoria 'nulo'.,OHE,Se crea categoria 'Other' para categorias con menos de 2000 registros. Es un identificador numerico que no tiene order ya que referencia un nombre. Se trat como categorica,JUANMI
+Census_OEMModelIdentifier,Nulos a -1,-,No parece tener relacion con 'Census_OEMNameIdentifier' porque no tienen el mismo numero de valores unicos. Es un identificador numerico. Como indica el número del fabricante(OEM) suponemos que existe una cronología. Como es columna numerica la pasamos a tipo numerico.,JUANMI
+Census_ProcessorManufacturerIdentifier,Nulos a -1,-,Es un identificador numerico. Indica el número de procesadores. Como es columna numerica la pasamos a tipo numerico.,JUANMI
+Census_ProcessorModelIdentifier,Nulos a -1,-,No parece tener relacion con 'Census_ProcessorManufacturerIdentifier' porque no tienen el mismo numero de valores unicos. Ni parece que corresponda el numero de procesadores con los modelos. Es un identificador numerico. Como indica el número del fabricante(OEM) suponemos que existe una cronología. Como es columna numerica la pasamos a tipo numerico.,JUANMI
+Census_ProcessorClass,Se crea categoria 'nulo'.,OHE,"Aunque casi todas las filas son nulas, las filas que aportan información tienen una desviacion interesante respecto a la media del target",JUANMI
+Census_PrimaryDiskTypeName,Se crea categoria 'nulo'.,OHE,Unimos UNKNOWN y Unespecified ya que tienen la misma media. Mantenemos separados los nulos por porque la media si es diferente.,JUANMI
+Census_ChassisTypeName,Se crea categoria 'nulo'.,OHE,Se unen etiquetas similares. Se crea categoria 'Other' para etiquetas con menos de 1000 registros.,JUANMI
+Census_PowerPlatformRoleName,Se crea categoria 'nulo'.,OHE,Se crea categoria 'Other' para etiquetas con menos de 500 registros.,JUANMI
+Census_InternalBatteryType,Se crea categoria 'nulo'.,OHE,Se crea categoria 'Other' para etiquetas con menos de 500 registros.,JUANMI
+Census_OSVersion,-.,-,Es un identificador numerico. Se modifica la version por enteros. Pasamos a tipo numerico. Como el modelo es un Random Forest un gran salto numerico entre categorias no afecta al resultado.,JUANMI
+RtpStateBitfield,-,OHE,"Eliminar outliers, se ven valores extremos",ANTO
+IsSxsPassiveMode,-,OHE,"Booleana, en la lista de numéricas",ANTO
+AVProductStatesIdentifier,Nulos a -1,-,Identificador del estado del producto,ANTO
+AVProductsInstalled,Nulos a -1,-,Es el numero de productos instalados. Indicador cuantitativo.,ANTO
+AVProductsEnabled,Nulos a -1,-,Es el numero de productos permitidos. Indicador cuantitativo.,ANTO
+HasTpm,-,ELIMINAR,"Booleana, marcada como numérica",ANTO
+CountryIdentifier,-,-,"Es una variable identificativa, se pasa a categórica",ANTO
+CityIdentifier,Nulos a -1,-,"Es una variable identificativa, se pasa a categórica",ANTO
+OrganizationIdentifier,Nulos a -1,-,Es una variable identificativa,ANTO
+GeoNameIdentifier,Nulos a -1,-,Es una variable identificativa,ANTO
+LocaleEnglishNameIdentifier,-,-,"Es una variable identificativa, se pasa a categórica",ANTO
+OsBuild,-,-,Indicador cuantitativo. No presenta diferencias apreciables con respecto al target.,ANTO
+OsSuite,-,-,Indicador cuantitativo. No presenta diferencias apreciables con respecto al target.,ANTO
+IsProtected,MostFrequentValue,OHE,"Booleana, marcada como numérica",ANTO
+Census_ProcessorCoreCount,-.,LOG,Realizamos la logaritmica para una mejor visualizacion. Gracias a la logaritmica vemos una clara distribución más amplia para casos sin deteccion. Presenta outliers aunque no afectan en Random Forest.,JUANMI
+Census_PrimaryDiskTotalCapacity,-.,LOG,Realizamos la logaritmica para una mejor visualizacion. Presenta outliers aunque no afectan en Random Forest.,JUANMI
+Census_SystemVolumeTotalCapacity,-.,LOG,Realizamos la logaritmica para una mejor visualizacion. No vemos una diferencia significativa respecto al target.,JUANMI
+Census_TotalPhysicalRAM,-.,LOG,Realizamos la logaritmica para una mejor visualizacion. No vemos una diferencia significativa respecto al target. Nulos a -1,JUANMI
+Census_InternalPrimaryDiagonalDisplaySizeInInches,Nulos a -1,-,No vemos una diferencia significativa respecto al target.,JUANMI
+Census_InternalPrimaryDisplayResolutionHorizontal,Nulos a -2 para no unirlos con los -1 existentes.,-,No vemos una diferencia significativa respecto al target.,JUANMI
+Census_InternalPrimaryDisplayResolutionVertical,Nulos a -1,-,No vemos una diferencia significativa respecto al target.,JUANMI
+Census_InternalBatteryNumberOfCharges,Nulos a -1,-,No vemos una diferencia significativa respecto al target.,JUANMI
+Census_OSBuildNumber,-,-,Hay poca variabilidad,MARIO
+Census_OSBuildRevision,-,-,Hay poca variabilidad,MARIO
+Census_OSEdition,-,OHE,"Hay variabilidad, es interesante para el algoritmo",MARIO
+Census_OSInstallLanguageIdentifier,Mediana,-,-,MARIO
+Census_OSUILocaleIdentifier,-,-,Baja variabilidad. La tratamos como categórica,MARIO
+Census_OSInstallLanguajeIdentifier,Mediana,-,Baja variabilidad,MARIO
+Census_ThresholdOptIn,Nulos a -1,-,-,MARIO
+Census_IsWIMBootEnabled,Nulos a -1,-,Representa una categorica. No hay gran variabilidad,MARIO
+Census_IsVirtualDevice,Nulos a -1,-,Representa una categorica,MARIO
+Census_IsAlwaysOnAlwaysConnectedCapable,Nulos a -1,-,Representa una categorica,MARIO
+Wdft_IsGamer,Nulos a -1,-,Representa una categorica. presenta variabilidad. Buena para el algoritmo,MARIO
+Wdft_RegionIdentifier,Nulos a -1,-,Presenta variabilidad,MARIO
+SMode,Nulos a -1,-,La marcamos como numérica.,JUANMI
+Firewall,-.,-,La marcamos como numérica.,JUANMI
+Census_HasOpticalDiskDrive,-.,-,Es una booleana. Se contempla desviación con respecto al target cuando es False (0) de un 4%.,JUANMI
+IsBeta,,ELIMINAR,No aporta variabilidad,ANTO
+PuaMode,,ELIMINAR,,JUANMI
+UacLuaenable,,ELIMINAR,,JUANMI
+Census_DeviceFamily,,ELIMINAR,,JUANMI
+AutoSampleOptIn,,ELIMINAR,,JUANMI
