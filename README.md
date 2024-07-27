@@ -212,10 +212,11 @@ El proyecto está estructurado en varias secciones, cada una enfocada en un aspe
 ## 🚀 Instrucciones
 
 1. Clonar el repositorio.
-   ```sh
-   git clone [<URL>](https://github.com/JuanMi-CG/NuclioSchool_Entregable_1_Supervised_Learning.git)
-   ```
-2. Asegurate de tener Graphviz instalado.
-  ```
-  [<URL>](https://graphviz.org/download/)
-  ```# NuclioSchool_Entregable_1_Supervised_Learning
+   
+    ```
+    git clone https://github.com/JuanMi-CG/NuclioSchool_Entregable_1_Supervised_Learning.git
+    ```
+
+2. Asegúrate de tener Graphviz instalado.
+    [Descargar Graphviz](https://graphviz.org/download/)
+
