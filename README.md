@@ -1,4 +1,4 @@
-# 🚗 Proyecto de Preprocesamiento de Datos para Data Science: Dataset de Coches BMW
+# 🚗 Proyecto de Supervised Learning - Data Science: Dataset de Coches BMW
 
 ## 📄 Descripción del Proyecto
 
